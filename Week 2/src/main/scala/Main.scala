@@ -1,4 +1,5 @@
 import java.io.{FileNotFoundException, IOException}
+import scala.io.StdIn.readLine
 
 object Hello extends App {
   // type inference
@@ -213,8 +214,80 @@ object Hello extends App {
   t._2
   t._3
   val (num, string, person) = (11, "Eleven", new Person1("Eleven"))
-  //print(ex2(2,3))
-  //  print(ex3(1, 3))
-  //  print(ex4(1))
-  //  ex5()
+
+  //Alternative way of output
+  val firstName = "John"
+  val mi = 'C'
+  val lastName = "Doe"
+  println(s"Name: $firstName $mi $lastName")
+
+  // Reading input
+  print("Enter your first name: ")
+  val firstName1 = readLine()
+  print("Enter your last name: ")
+  val lastName1 = readLine()
+
+  println(s"Your name is $firstName1 $lastName1")
+
+  // Map and Foreach
+  val ratings = Map(
+    "Lady in the Water"  -> 3.0,
+    "Snakes on a Plane"  -> 4.0,
+    "You, Me and Dupree" -> 3.5
+  )
+  for ((name,rating) <- ratings) println(s"Movie: $name, Rating: $rating")
+  ratings.foreach {
+    case(movie, rating) => println(s"key: $movie, value: $rating")
+  }
+  val names2 = List("adam", "david", "frank")
+  val names3 = List("_adam", "_david", "_frank")
+  val ucNames = for (name <- names2) yield name.capitalize
+  val capNames1 = for (name <- names3) yield {
+    val nameWithoutUnderscore = name.drop(1)
+    val capName = nameWithoutUnderscore.capitalize
+    capName
+  }
+  // shorter version
+  val capNames2 = for (name <- names) yield name.drop(1).capitalize
+
+  // match
+  val i = readLine()
+  val monthName = i match {
+    case 1  => "January"
+    case 2  => "February"
+    case 3  => "March"
+    case 4  => "April"
+    case 5  => "May"
+    case 6  => "June"
+    case 7  => "July"
+    case 8  => "August"
+    case 9  => "September"
+    case 10 => "October"
+    case 11 => "November"
+    case 12 => "December"
+    case _  => "Invalid month"
+  }
+
+  def convertBooleanToStringMessage(bool: Boolean): String = bool match {
+    case true => "you said true"
+    case false => "you said false"
+  }
+
+  val evenOrOdd = i match {
+    case 1 | 3 | 5 | 7 | 9 => println("odd")
+    case 2 | 4 | 6 | 8 | 10 => println("even")
+    case _ => println("some other number")
+  }
+
+  try {
+    // your scala code here
+  }
+  catch {
+//    case foo: FooException => handleFooException(foo)
+//    case bar: BarException => handleBarException(bar)
+    case _: Throwable => println("Got some other kind of Throwable exception")
+  } finally {
+    // your scala code here, such as closing a database connection
+    // or file handle
+  }
 }
