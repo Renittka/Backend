@@ -423,6 +423,7 @@ object Main extends App {
     println(doubledInts)
     println(tripleInts)
   }
+
   def anonymousCase(): Unit ={
     val ints = List.range(1, 10)  //  List(1, 2, 3, 4, 5, 6, 7, 8, 9)
     val ints1 = List(1,2,3)
@@ -434,5 +435,4 @@ object Main extends App {
     def lessThanFive(i: Int): Boolean = if (i < 5) true else false
     val y = ints.filter(lessThanFive)
   }
-  f9()
 }

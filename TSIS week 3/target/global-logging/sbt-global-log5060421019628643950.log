@@ -1,0 +1,8 @@
+[debug] > Exec(complie, None, None)
+[error] Not a valid command: complie (similar: completions, client)
+[error] Not a valid project ID: complie
+[error] Expected ':'
+[error] Not a valid key: complie (similar: compile, compilers, compileJava)
+[error] complie
+[error]        ^
+[debug] > Exec(idea-shell, None, None)
