@@ -317,6 +317,56 @@ object Main extends App {
     val d = ArrayBuffer.range('a', 'h')  // ArrayBuffer(a, b, c, d, e, f, g)
     d.trimStart(2)                       // ArrayBuffer(c, d, e, f, g)
     d.trimEnd(2)                         // ArrayBuffer(c, d, e)
+
+    var ints2 = List(7, 8, 9)
+    println(ints2)
+    println(ints2.apply(0))
+    println(ints2(1))
+
+    val ints3 = Vector(1, 2, 3)
+    println(ints3)
+    println(ints3.apply(0))
+    println(ints3(1))
+
   }
-  f6()
+  def appendCase(): Unit ={
+    val a = List(1,2,3)
+    // prepend elements to a List
+    val b = 0 +: a  // List(0, 1, 2, 3)
+    println(b)
+
+    val av = Vector(1,2,3)
+    val bv = av :+ 4
+    val bb = av ++ Vector(4, 5)
+    println(bv)
+    println(bb)
+    for (b <- bb) println(b)
+  }
+  def f7(): Unit ={
+    def rec(list: List[Int]): Unit ={
+      list match {
+        case Nil => {
+          println("end!")
+        }
+        case head :: tail => {
+          println(head)
+          rec(tail)
+        }
+        case _ => {
+          println("error!")
+        }
+      }
+    }
+    var list = List(-7, 8 ,9)
+    rec(list)
+  }
+  def f8(): Unit ={
+    val states = Map("AK" -> "Alaska")
+    val s = Set(1, 2, 3, 4, 5)
+    println(states)
+    println(s)
+  }
+  def mapCase(): Unit ={
+
+  }
 }
