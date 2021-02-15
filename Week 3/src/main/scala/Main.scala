@@ -329,6 +329,7 @@ object Main extends App {
     println(ints3(1))
 
   }
+
   def appendCase(): Unit ={
     val a = List(1,2,3)
     // prepend elements to a List
@@ -342,6 +343,7 @@ object Main extends App {
     println(bb)
     for (b <- bb) println(b)
   }
+
   def f7(): Unit ={
     def rec(list: List[Int]): Unit ={
       list match {
@@ -360,13 +362,77 @@ object Main extends App {
     var list = List(-7, 8 ,9)
     rec(list)
   }
+
   def f8(): Unit ={
     val states = Map("AK" -> "Alaska")
     val s = Set(1, 2, 3, 4, 5)
     println(states)
     println(s)
   }
+
   def mapCase(): Unit ={
+    val states = collection.mutable.Map("AK" -> "Alaska")
+    // add element
+    states += ("AL" -> "Alabama")
+    states += ("AR" -> "Arkansas", "AZ" -> "Arizona")
+    states ++= Map("CA" -> "California", "CO" -> "Colorado")
+    // remove element
+    states -= "AR"
+    states -= ("AL", "AZ")
+    states --= List("AL", "AZ")
+    // update element
+    states("AK") = "Alaska, A Really Big State"
+    // traverse a map
+    val ratings = Map(
+      "Lady in the Water"-> 3.0,
+      "Snakes on a Plane"-> 4.0,
+      "You, Me and Dupree"-> 3.5
+    )
+    // loop over elements
+    for ((k,v) <- ratings) println(s"key: $k, value: $v")
+    ratings.foreach {
+      case(movie, rating) => println(s"key: $movie, value: $rating")
+    }
+  }
+
+  def setCase(): Unit ={
+    val set = scala.collection.mutable.Set[Int]()
+    // add elements
+    set += 1
+    set += 2 += 3
+    set ++= Vector(4, 5)
+    set.add(6)
+    // remove elements
+    set -= 1
+    set -= (2, 3)
+    set --= Array(4,5)
+    set.clear()
+    set.remove(2)
 
   }
+
+  def f9(): Unit ={
+    def f(x: Int): Int={
+      x * 3
+    }
+
+    val ints = List(1,2,3)
+    val doubledInts = ints.map(_ * 2). map(_ * 3).map(_ * 4)
+    val tripleInts = ints.map(f)
+
+    println(doubledInts)
+    println(tripleInts)
+  }
+  def anonymousCase(): Unit ={
+    val ints = List.range(1, 10)  //  List(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    val ints1 = List(1,2,3)
+    val doubledInts = ints.map((i: Int) => i * 2)
+//    val doubledInts = ints.map(i => i * 2)
+    val doubledInts2 = for (i <- ints) yield i * 2
+    val x = ints.filter(_ > 5)
+    val x1 = ints.filter(_ % 2 == 0)
+    def lessThanFive(i: Int): Boolean = if (i < 5) true else false
+    val y = ints.filter(lessThanFive)
+  }
+  f9()
 }
