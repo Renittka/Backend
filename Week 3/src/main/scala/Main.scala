@@ -257,6 +257,9 @@ object Main extends App {
     case object StopSpeakingMessage
     case object PauseSpeakingMessage
     case object ResumeSpeakingMessage
+
+    trait Actor
+
     class Speak extends Actor {
       def receive = {
         case StartSpeakingMessage(textToSpeak) =>
