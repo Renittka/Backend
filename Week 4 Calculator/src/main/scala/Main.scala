@@ -1,52 +1,103 @@
-import sun.misc.Signal
+import scala.collection.mutable
 
-sealed abstract class Expression
+object Operation extends Enumeration {
+  type Operation = Value
+  val PLUS, MINUS, DIVIDE, MULTIPLY = Value
 
-final case class Literal(v: Double) extends Expression
-
-final case class Ref(name: String) extends Expression
-
-final case class Plus(a: Expression, b: Expression) extends Expression
-
-final case class Minus(a: Expression, b: Expression) extends Expression
-
-final case class Times(a: Expression, b: Expression) extends Expression
-
-final case class Divide(a: Expression, b: Expression) extends Expression
-
-//object Calculator {
-//  def computeValues(namedExpressions: Map[String, Signal[Expr]]): Map[String, Signal[Double]] = {
-//    namedExpressions map {
-//      case (name, expr) => name -> Signal(eval(expr(), namedExpressions))
-//    }
-//  }
-
-  def eval(expr: Expression, references: Map[String, Signal[Expression]]): Double = {
-    expr match {
-      case Literal(v) => v
-      case Plus(a, b) => eval(a, references) + eval(b, references)
-      case Minus(a, b) => eval(a, references) - eval(b, references)
-      case Times(a, b) => eval(a, references) * eval(b, references)
-      case Divide(a, b) => eval(a, references) / eval(b, references)
+  def getOperation(operation :Char): Operation = {
+    operation match {
+      case '+' => PLUS
+      case '-' => MINUS
+      case '/' => DIVIDE
+      case '*' => MULTIPLY
     }
   }
+}
+
+import Operation._
+
 class Calculator {
-  def plus(a: Int, b: Int): Int = a+b
+  object Error {
+    val error = "Invalid operation"
+  }
 
-  def minus(a: Int, b: Int): Int = a-b
+  var digits: mutable.Stack[BigDecimal] = mutable.Stack()
+  var operations: mutable.Stack[Operation] = mutable.Stack()
 
-  def multiply(a: Int, b: Int): Long = a*b
+  var x = 0
+  var oneOperation = false
 
-  def divide(a: Int, b: Int): Int = {
-    require(b != 0, "denominator can not be 0")
-    a/b
+  def run(input: String): String = {
+    for (char <- input) {
+      char match {
+        case a
+          if char.isDigit =>
+          x = x * 10 + a.asDigit
+          oneOperation = false
+
+        case _ =>
+          digits.push(x)
+          x = 0
+          if (oneOperation) {
+            return Error.error
+          }
+
+          val newOperation = Operation.getOperation(char)
+
+          while (operations.nonEmpty) {
+            calculation()
+          }
+
+          operations.push(newOperation)
+          oneOperation = true
+      }
+    }
+
+    if (x > 0 | input(input.length - 1) == '0') digits.push(x)
+
+    while (operations.nonEmpty & digits.length > 1) {
+      calculation()
+    }
+
+    if (operations.nonEmpty) return Error.error
+    digits.top.setScale(2, BigDecimal.RoundingMode.HALF_UP).toString()
+  }
+
+  def calculate(a: BigDecimal, b: BigDecimal, operation:  Operation): BigDecimal = {
+    operation match {
+      case PLUS => a + b
+      case MINUS => b - a
+      case MULTIPLY => a * b
+      case DIVIDE => b / a
+    }
+  }
+
+  def calculation(): Unit ={
+    val operation = operations.top
+    operations.pop
+
+    val firstDigit = digits.top
+    digits.pop
+
+    val secondDigit = digits.top
+    digits.pop
+
+    digits.push(calculate(a = firstDigit, b = secondDigit, operation))
   }
 }
+
 object Solution extends App {
-  val calc = new Calculator
-//  val input = scala.io.StdIn.readLine()
-  val a = scala.io.StdIn.readLine()
-  val b = scala.io.StdIn.readLine()
-  val result = calc.minus(a.toInt,b.toInt)
-  println("Result is " + result)
+  var res : Boolean = true
+  var pureInput: String = ""
+
+  while (res) {
+    val input: String = scala.io.StdIn.readLine()
+
+    pureInput = pureInput.concat(input)
+    pureInput = pureInput.replace("=", "")
+    pureInput = pureInput.replace(" ", "")
+    res = false
+  }
+  val calculator = new Calculator
+  println(calculator.run(pureInput))
 }

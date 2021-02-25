@@ -24,7 +24,6 @@ object SalaryRaiser2 {
 
 }
 
-
 object Main extends App {
   def f1(): Unit ={
     val list  = List(1.0, 2.0, 3.0, 4.0)
