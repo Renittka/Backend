@@ -8,10 +8,10 @@ object Gabbler {
     Behaviors.setup { context =>
       Behaviors.receiveMessage {
         case SessionGranted(handle) =>
-          handle ! PostMessage("Hello World!")
+          handle ! PostMessage("Hello World! 11")
           Behaviors.same
         case MessagePosted(screenName, message) =>
-          context.log.info2("message has been posted by '{}': {}", screenName, message)
+          context.log.info2("message has been posted by '{}': {} !", screenName, message)
           Behaviors.stopped
       }
     }

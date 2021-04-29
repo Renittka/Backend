@@ -1,0 +1,57 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 0 products, 0 sources, 0 libraries
+[debug] current source = Set(${BASE}/src/main/scala/HttpServerRoutingMinimal.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/HttpServerRoutingMinimal.scala), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] Full compilation, no sources in previous analysis.
+[debug] all 1 sources are invalidated
+[debug] Initial set of included nodes: 
+[debug] Recompiling all sources: number of invalidated sources > 50.0% of all sources
+[debug] compilation cycle 1
+[info] compiling 1 Scala source to E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week6part1\target\scala-2.13\classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.5.1:compile for Scala 2.13.5
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.5. Compiling...
+[debug] Creating plain compiler interface for 2.13.5.
+[debug]   > Arguments: 
+[debug] 	-d
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_2d58e938
+[debug] 	-nowarn
+[debug] 	-bootclasspath
+[debug] 	C:\Program Files\Java\jdk1.8.0_281\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_281\jre\classes;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.5\scala-library-2.13.5.jar
+[debug] 	-classpath
+[debug] 	C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-interface\1.5.1\compiler-interface-1.5.1.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\util-interface\1.5.0\util-interface-1.5.0.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\compiler-bridge_2.13\1.5.1\compiler-bridge_2.13-1.5.1-sources.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.13.5\scala-compiler-2.13.5.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.13.5\scala-reflect-2.13.5.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\jline\jline\3.19.0\jline-3.19.0.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\net\java\dev\jna\jna\5.3.1\jna-5.3.1.jar
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\scala\ZincCompat.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\API.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\AbstractZincFile.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\Analyzer.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\CallbackGlobal.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\ClassName.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\Compat.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\CompilerBridge.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\ConsoleBridge.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\DelegatingReporter.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\Dependency.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\ExtractAPI.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\ExtractUsedNames.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\GlobalHelpers.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\InteractiveConsoleBridge.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\InteractiveConsoleFactoryBridge.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\InteractiveConsoleHelper.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\InteractiveConsoleResponse.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\JarUtils.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\JavaUtils.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\LocalToNonLocalClass.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\LocateClassFile.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\Log.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\Message.scala
+[debug] 	C:\Users\user\AppData\Local\Temp\sbt_4fda5a6d\xsbt\ScaladocBridge.scala
+[debug]       
+[info]   Compilation completed in 11.731s.
+[debug] [zinc] Running cached compiler 7a2ac075 for Scala compiler version 2.13.5
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Program Files\Java\jdk1.8.0_281\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_281\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_281\jre\classes;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.5\scala-library-2.13.5.jar
+[debug] 	-classpath
+[debug] 	E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week6part1\target\scala-2.13\classes;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-actor-typed_2.13\2.6.8\akka-actor-typed_2.13-2.6.8.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-stream_2.13\2.6.8\akka-stream_2.13-2.6.8.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-http_2.13\10.2.4\akka-http_2.13-10.2.4.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-actor_2.13\2.6.8\akka-actor_2.13-2.6.8.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-slf4j_2.13\2.6.8\akka-slf4j_2.13-2.6.8.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-protobuf-v3_2.13\2.6.8\akka-protobuf-v3_2.13-2.6.8.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\ssl-config-core_2.13\0.4.1\ssl-config-core_2.13-0.4.1.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-http-core_2.13\10.2.4\akka-http-core_2.13-10.2.4.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\config\1.4.0\config-1.4.0.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.13\1.1.2\scala-parser-combinators_2.13-1.1.2.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-parsing_2.13\10.2.4\akka-parsing_2.13-10.2.4.jar;C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\twitter\hpack\1.0.2\hpack-1.0.2.jar
+[debug] Scala compilation took 15.7353971 s
+[info] done compiling

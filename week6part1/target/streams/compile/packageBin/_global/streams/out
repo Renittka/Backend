@@ -1,0 +1,9 @@
+[debug] Packaging E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week6part1\target\scala-2.13\week6part1_2.13-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	application.conf
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week6part1\target\scala-2.13\classes\application.conf
+[debug] 	HttpServerRoutingMinimal$.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week6part1\target\scala-2.13\classes\HttpServerRoutingMinimal$.class
+[debug] 	HttpServerRoutingMinimal.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week6part1\target\scala-2.13\classes\HttpServerRoutingMinimal.class
+[debug] Done packaging.

@@ -2,7 +2,7 @@ import scala.collection.mutable
 
 object Operation extends Enumeration {
   type Operation = Value
-  val PLUS, MINUS, DIVIDE, MULTIPLY = Value
+  val PLUS, MINUS, DIVIDE, MULTIPLY, POWER = Value
 
   def getOperation(operation :Char): Operation = {
     operation match {
@@ -10,6 +10,7 @@ object Operation extends Enumeration {
       case '-' => MINUS
       case '/' => DIVIDE
       case '*' => MULTIPLY
+      case '^' => POWER
     }
   }
 }
@@ -63,12 +64,21 @@ class Calculator {
     digits.top.setScale(2, BigDecimal.RoundingMode.HALF_UP).toString()
   }
 
+  def power(a: BigDecimal, b: BigDecimal): BigDecimal ={
+    var res = BigDecimal(1)
+    for (i <- 0 until a.toInt){
+      res = res*b
+    }
+    res
+  }
+
   def calculate(a: BigDecimal, b: BigDecimal, operation:  Operation): BigDecimal = {
     operation match {
       case PLUS => a + b
       case MINUS => b - a
       case MULTIPLY => a * b
       case DIVIDE => b / a
+      case POWER => power(a,b)
     }
   }
 

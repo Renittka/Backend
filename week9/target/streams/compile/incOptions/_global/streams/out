@@ -1,0 +1,21 @@
+[debug] Created transactional ClassFileManager with tempDir = E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week9\target\scala-2.12\classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Registering generated classes:
+[debug] 	TodoRepository.class
+[debug] 	MyRouter.class
+[debug] 	Todo.class
+[debug] 	MyRouter$anon$importedEncoder$macro$154$1$$anon$2.class
+[debug] 	Boot$.class
+[debug] 	Boot$delayedInit$body.class
+[debug] 	MyRouter$anon$importedEncoder$macro$154$1$$anon$1.class
+[debug] 	InMemoryTodoRepository$.class
+[debug] 	InMemoryTodoRepository.class
+[debug] 	MyRouter$anon$importedEncoder$macro$154$1.class
+[debug] 	Boot.class
+[debug] 	Router.class
+[debug] 	MyServer.class
+[debug] 	MyRouter$anon$importedEncoder$macro$154$1$anon$macro$152$1.class
+[debug] 	MyServer$.class
+[debug] 	Todo$.class
+[debug] Removing the temporary directory used for backing up class files: E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\week9\target\scala-2.12\classes.bak
