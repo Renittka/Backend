@@ -9,15 +9,7 @@ object Main extends App{
 
   // 242. Valid Anagram
   def isAnagram(s: String, t: String): Boolean = {
-    val result: Boolean = s.sorted.equals(t.sorted)
-//    var count: Int = 0
-//    for (i <- s){
-//      if (t.contains(i)){
-//        count += 1
-//      }
-//    }
-//    if (count == s.length && count == t.length) result = true
-
+    val result: Boolean = s.sorted.equals(t.sorted) // two sorted strings compares
     result
   }
 
