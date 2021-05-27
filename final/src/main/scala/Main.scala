@@ -124,17 +124,17 @@ object Main extends App{
   // 1710. Maximum Units on a Truck
   def maximumUnits(boxTypes: Array[Array[Int]], truckSize: Int): Int = {
     var result: Int = 0
-    Array.sort(boxTypes, (a, b) => {return b(1) - a(1)})
-    var truckS = truckSize
-    var num: Int = 0
-
-    for(item <- boxTypes) {
-      num = Math.min(item(0), truckSize)
-      result += num*item(1)
-
-      if(truckS < num){}
-      truckS -= num
-    }
+//    val sortedArr = boxTypes.sorted()
+//    var truckS = truckSize
+//    var num: Int = 0
+//
+//    for(item <- sortedArr) {
+//      num = Math.min(item(0), truckSize)
+//      result += num*item(1)
+//
+//      if(truckS < num){}
+//      truckS -= num
+//    }
     result
   }
 
@@ -220,7 +220,7 @@ object Main extends App{
 
 //  println(canMakeArithmeticProgression(arr = Array(3,5,1)))
 
-  println(maximumUnits(boxTypes = Array(Array(1,3),Array(2,2),Array(3,1)), truckSize = 4))
+//  println(maximumUnits(boxTypes = Array(Array(1,3),Array(2,2),Array(3,1)), truckSize = 4))
 
 //  for ( i <- intersection(nums1 = Array(1,2,2,1), nums2 = Array(2,2))) println(i)
 
