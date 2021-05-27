@@ -1,0 +1,23 @@
+[debug] Created transactional ClassFileManager with tempDir = E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\practice\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	Main$delayedInit$body.class
+[debug] 	Main$TreeNode.class
+[debug] 	Main.class
+[debug] 	Main$.class
+[debug] 	Main$ParkingSystem.class
+[debug] 	Main$TreeNode$.class
+[debug] We backup class files:
+[debug] 	Main$delayedInit$body.class
+[debug] 	Main$TreeNode.class
+[debug] 	Main.class
+[debug] 	Main$.class
+[debug] 	Main$ParkingSystem.class
+[debug] 	Main$TreeNode$.class
+[debug] Registering generated classes:
+[debug] 	Main$delayedInit$body.class
+[debug] 	Main$TreeNode.class
+[debug] 	Main.class
+[debug] 	Main$.class
+[debug] 	Main$ParkingSystem.class
+[debug] 	Main$TreeNode$.class
+[debug] Removing the temporary directory used for backing up class files: E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\practice\target\scala-2.13\classes.bak

@@ -1,0 +1,4 @@
+[warn] E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\src\main\scala\Main.scala:153:22: comparing values of types Int and Array[Int] using `==' will always yield false
+[warn]           if (arr(i) == value) i += 1 //if item of arr is equal to item of map else false
+[warn]                      ^
+[warn] one warning found

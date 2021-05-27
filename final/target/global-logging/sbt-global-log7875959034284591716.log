@@ -1,0 +1,16 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.5.2 (Oracle Corporation Java 1.8.0_281)
+[debug]       Load.loadUnit: plugins took 119.9299ms
+[debug]       Load.loadUnit: defsScala took 0.4053ms
+[debug] [Loading] Scanning directory C:\Users\user\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\user\.sbt\1.0\plugins, returning: ()

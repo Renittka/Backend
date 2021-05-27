@@ -1,0 +1,15 @@
+[debug] Packaging E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\final_2.12-0.2.jar ...
+[debug] Input file mappings:
+[debug] 	Main$.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\classes\Main$.class
+[debug] 	Main$delayedInit$body.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\classes\Main$delayedInit$body.class
+[debug] 	Main$Node.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\classes\Main$Node.class
+[debug] 	Main$TreeNode$.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\classes\Main$TreeNode$.class
+[debug] 	Main$TreeNode.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\classes\Main$TreeNode.class
+[debug] 	Main.class
+[debug] 	  E:\Disk G\KBTU\3 course\2 term\Backend Scala\Practice\final\target\scala-2.12\classes\Main.class
+[debug] Done packaging.
